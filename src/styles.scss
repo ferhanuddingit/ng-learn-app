@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+select.ng-invalid.ng-touched,
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+  box-shadow: 0 0 13px inset (255, 0, 0, 0.90);
+}
+
+.myReacForm.INVALID {
+  border: 1px solid red;
+  box-shadow: 0 0 37px rgba(255, 0, 0, 0.2) !important;
+}
+
+.myReacForm.PENDING {
+  border: 1px solid yello;
+  box-shadow: 0 0 37px rgba(255, 235, 59, 0.7) !important;
+}
+
+.myReacForm.VALID {
+  border: 1px solid green;
+  box-shadow: 0 0 37px rgba(78, 233, 84, 0.61) !important;
+}

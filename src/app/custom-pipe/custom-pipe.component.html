@@ -1,0 +1,30 @@
+<div class="form-group row">
+  <div class="col-md-12">
+    <input type="text" class="form-control" placeholder="Search by product..." [(ngModel)]="nameSearch" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of products | filter:nameSearch">
+          <th scope="row">{{prod.sno}}</th>
+          <td>{{prod.name}}</td>
+          <td>{{prod.price}}</td>
+          <td>
+            <span *ngIf="prod.availability == 'Available'" class="badge badge-success">{{prod.availability}}</span>
+            <span *ngIf="prod.availability == 'Not Available'" class="badge badge-danger">{{prod.availability}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
